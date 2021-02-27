@@ -1,0 +1,55 @@
+Status Code
+200 Success | 400 Wrong data | 401 Fail Login | 403 Unauthorized
+===============================================
+Header {
+    Content-Type: application/json,
+}
+Body {
+    username: String,
+    password: String
+}
+
+POST /login
+POST /signup
+================================================
+Header {
+    Content-Type: application/json,
+    Authorization: JWT $token
+}
+
+GET /flush
+
+Body {
+    latitude: Number,
+    longitude: Number,
+    name: String,
+    district: String,
+    patients: [Number]
+}
+GET /locations
+GET /locations/:id
+DELETE /locations/:id
+POST /locations
+PUT /locations/:id
+
+Body {
+    caseno: Number,
+    name: String,
+    age: Number,
+    gender: String, (M/F)
+    reportDate: Date
+}
+GET /patients
+DELETE /patients/:id
+POST /patients
+PUT /patients/:id
+
+Body {
+    username: String,
+    password: String
+}
+GET /users
+DELETE /users/:id
+POST /users
+PUT /users/:id
+===============================================
